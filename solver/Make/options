@@ -1,0 +1,12 @@
+EXE_INC = \
+    -I$(HOME)/software/pyTorch/libtorch/include \
+    -I$(HOME)/software/pyTorch/libtorch/include/torch/csrc/api/include
+
+EXE_LIBS = \
+    -lchemistryModel \
+    -lfiniteVolume \
+    -lmeshTools
+    -rdynamic \
+    -wl,-rpath,$(HOME)/software/pyTorch/librotch/lib $(HOME)/software/pyTorch/libtorch/lib/libtorch.s $(HOME)/software/pyTorch/libtorch/lib/libc10.so \
+    -wl,--as-needed #(HOME)/software/pyTorch//libtorch/lib/libc10.so \
+    -lpthread
